@@ -18,12 +18,14 @@ class DataService : IDataService {
             .await()
             .json()
             .await()
-            .unsafeCast<List<Album>>()
+            .unsafeCast<Array<Album>>()
+            .toList()
 
     override suspend fun getPhotos(albumId: Long) =
         window.fetch("https://jsonplaceholder.typicode.com/albums/$albumId/photos")
             .await()
             .json()
             .await()
-            .unsafeCast<List<Photo>>()
+            .unsafeCast<Array<Photo>>()
+            .toList()
 }

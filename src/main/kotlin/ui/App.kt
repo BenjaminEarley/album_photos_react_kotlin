@@ -11,6 +11,7 @@ import react.router.dom.switch
 import styled.css
 import styled.styledDiv
 import styled.styledImg
+import ui.albums.albums
 
 val app = functionalComponent<RProps> {
     browserRouter {
@@ -26,9 +27,7 @@ external interface AlbumIdProps : RProps {
 val pageSwitch = functionalComponent<RProps> {
     switch {
         route("/", exact = true) {
-            div {
-
-            }
+            albums()
         }
         route<AlbumIdProps>("/album/:albumId") { props ->
             div {

@@ -1,5 +1,6 @@
 plugins {
     id("org.jetbrains.kotlin.js") version "1.4.21"
+    kotlin("plugin.serialization") version "1.4.10"
 }
 
 group = "com.benjaminearley"
