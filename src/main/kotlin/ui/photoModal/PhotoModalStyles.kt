@@ -1,11 +1,12 @@
-package ui.common.modal
+package ui.photoModal
 
 import kotlinx.css.*
 import kotlinx.css.properties.Transforms
+import kotlinx.css.properties.lh
 import kotlinx.css.properties.translate
 import styled.StyleSheet
 
-object ModalStyles : StyleSheet("ModalStyles", isStatic = true) {
+object PhotoModalStyles : StyleSheet("PhotoModalStyles", isStatic = true) {
 
     val Wrapper by css {
         position = Position.fixed
@@ -31,11 +32,31 @@ object ModalStyles : StyleSheet("ModalStyles", isStatic = true) {
         zIndex = 100
         background = "#FFFFFF"
         position = Position.relative
+        width = LinearDimension.fitContent
         margin = "auto"
     }
 
     val Content by css {
         overflowX = Overflow.hidden
         overflowY = Overflow.auto
+    }
+
+    val ModalImage by css {
+        background = "#F0F2F5"
+        width = 600.px
+        height = 600.px
+    }
+
+    val Modal by css {
+        background = "#FFFFFF"
+    }
+
+    val PhotoTitle by css {
+        fontStyle = FontStyle.normal
+        fontWeight = FontWeight.w500
+        fontSize = 16.px
+        lineHeight = 20.px.lh
+        textAlign = TextAlign.center
+        color = Color("#838690")
     }
 }

@@ -14,14 +14,4 @@ object PhotoStyles : StyleSheet("PhotoStyles", isStatic = true) {
         textAlign = TextAlign.center
         color = Color("#838690")
     }
-
-    val ModalImage by css {
-        background = "#F0F2F5"
-        width = 600.px
-        height = 600.px
-    }
-
-    val Modal by css {
-        background = "#FFFFFF"
-    }
 }

@@ -12,8 +12,8 @@ import styled.styledH1
 import styled.styledP
 import ui.AlbumIdProps
 import ui.AppStyles
-import ui.common.modal.modal
-import ui.common.modal.useModal
+import ui.photoModal.photoModal
+import ui.photoModal.usePhotoModal
 
 fun RBuilder.photos(id: Long): ReactElement {
     return child(photos) {
@@ -83,7 +83,7 @@ fun RBuilder.photoCard(handler: PhotoProps.() -> Unit): ReactElement {
 
 val photoCard = functionalComponent<PhotoProps> { props ->
 
-    val (showModal, toggle) = useModal()
+    val (showModal, toggle) = usePhotoModal()
 
     div {
         div {
@@ -107,13 +107,11 @@ val photoCard = functionalComponent<PhotoProps> { props ->
                 +props.title
             }
         }
-//        modal {
-//            isShown = showModal
-//            hide = toggle
-//            modalContent = photoModal {
-//                title = props.title
-//                url = props.url
-//            }
-//        }
+        photoModal {
+            isShown = showModal
+            hide = toggle
+            title = props.title
+            url = props.url
+        }
     }
 }

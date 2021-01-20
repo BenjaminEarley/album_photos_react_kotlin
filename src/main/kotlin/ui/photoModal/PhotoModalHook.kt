@@ -1,11 +1,11 @@
-package ui.common.modal
+package ui.photoModal
 
 import react.useState
 
 typealias Toggle = () -> Unit
 
-fun useModal(): Pair<Boolean, Toggle> {
-    val (isShown, setIsShown) = useState<Boolean>(false)
+fun usePhotoModal(): Pair<Boolean, Toggle> {
+    val (isShown, setIsShown) = useState(false)
 
     val toggle = { setIsShown(!isShown) }
 
