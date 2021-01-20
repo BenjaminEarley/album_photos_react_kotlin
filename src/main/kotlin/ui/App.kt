@@ -2,7 +2,6 @@ package ui
 
 import react.RProps
 import react.child
-import react.dom.div
 import react.functionalComponent
 import react.router.dom.browserRouter
 import react.router.dom.route
@@ -12,6 +11,7 @@ import styled.css
 import styled.styledDiv
 import styled.styledImg
 import ui.albums.albums
+import ui.photos.photos
 
 val app = functionalComponent<RProps> {
     browserRouter {
@@ -30,9 +30,7 @@ val pageSwitch = functionalComponent<RProps> {
             albums()
         }
         route<AlbumIdProps>("/album/:albumId") { props ->
-            div {
-
-            }
+            photos(props.match.params.albumId)
         }
     }
 }

@@ -43,7 +43,7 @@ external interface AlbumGridProps : RProps {
 
 fun RBuilder.albumGrid(handler: AlbumGridProps.() -> Unit): ReactElement {
     return child(albumGrid) {
-        this.attrs(handler)
+        attrs(handler)
     }
 }
 
@@ -69,7 +69,7 @@ external interface AlbumProps : RProps {
 
 fun RBuilder.albumCard(handler: AlbumProps.() -> Unit): ReactElement {
     return child(albumCard) {
-        this.attrs(handler)
+        attrs(handler)
     }
 }
 
